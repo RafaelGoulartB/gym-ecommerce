@@ -1,0 +1,11 @@
+
+.toogle-form .first-form {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000;
+}
+
+.toogle-form .last-form {
+    background-color: #000000;
+    color: #fff;
+}
