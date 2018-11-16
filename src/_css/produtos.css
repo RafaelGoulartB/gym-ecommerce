@@ -22,10 +22,6 @@
 .produto .produto-price {
     margin-bottom: 12px;
 }
-.produto img {
-    width: 280px;
-    height: 280px;
-}
 .produto a {
     color: #fff;
     text-decoration: none;
