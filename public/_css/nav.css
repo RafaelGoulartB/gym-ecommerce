@@ -65,7 +65,7 @@
 }
 .subnav ul {
     display: flex;
-    width: 60%;
+    width: 300%;
     margin-left: 40%;
     justify-content: space-around;
     font-size: 1.15em;
@@ -74,10 +74,40 @@
     text-decoration: none;
     color: #ffffff;
 }
+.subnav li a:hover {
+    text-decoration: underline;
+}
 
-.dropdown::after {
+.dropdown-buttom::after {
     content: url('../_img/seta-baixo.svg');
     margin-left: 3px;
 }
 
 /* Dropdown */
+
+.dropdown-buttom {
+    position: relative;
+}
+.dropdown {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: #000000;
+    border: 1px solid #fff;
+    margin-top: 1em;
+    transition: opacity .3s ease-out;
+    opacity: 0;
+}
+.dropdown-item {
+    padding: 10px;   
+}
+.dropdown-item a {
+    font-size: 14pt;
+}
+
+.dropdown-buttom:hover .dropdown-1 {
+    opacity: 1;
+}
+.dropdown-buttom:hover .dropdown-2 {
+    opacity: 1;
+}
