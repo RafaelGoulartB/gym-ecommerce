@@ -1,0 +1,83 @@
+/* Barra de Navegação superior */
+.overnav {
+    background-color: #262626;
+}
+
+.overnav ul {
+    height: 42px;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-left: 60%;
+    align-items: center;
+}
+.overnav li {
+    font-size: 1.15rem;
+}
+
+.overnav ul a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.overnav li a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    position: relative;
+}
+.search-box {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    /* width: 160px; */
+    width: 13em;
+    height: .1px;
+    padding: 12px 15px;
+}
+.search-lupa {
+    background: none;
+    border: none;
+    height: 22px;
+    position: absolute;
+    left: 150px;
+    top: 4px;
+}
+.search-lupa img {
+    width: 15px;
+    height: 15px;
+}
+
+/* Barra de navegação debaixo */
+.subnav {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    border-bottom: 2px solid #36CDFD;
+    height: 52px;
+    
+}
+.subnav .logo {
+    font-weight: bold;
+    vertical-align: center;
+    font-size: 1.5em;
+    margin-left: 1.25em;
+}
+.subnav ul {
+    display: flex;
+    width: 60%;
+    margin-left: 40%;
+    justify-content: space-around;
+    font-size: 1.15em;
+}
+.subnav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.dropdown::after {
+    content: url('../_img/seta-baixo.svg');
+    margin-left: 3px;
+}
+
+/* Dropdown */
