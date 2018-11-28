@@ -1,0 +1,45 @@
+.main {
+    margin-top: 5em;
+    margin-bottom: 8em;
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.main .desc {
+    margin-left: 1.5em;
+}
+
+.main .title {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.main .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+    line-height: 1.25em;
+}
+.main .anuncio-1 {
+    padding-bottom: 2em;
+    border-bottom: 2px solid #fff;
+}
+.main .anuncio-2 {
+    margin-top: -2em;
+}
+.main span {
+    font-weight: bold;
+}
+
+.main .btn-comprar {
+    background-color: #000000;
+    border-radius: 3px;
+    border: none;
+    width: 180px;
+    height: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12pt;
+}
