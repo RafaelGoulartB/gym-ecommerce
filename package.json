@@ -1,0 +1,19 @@
+{
+  "name": "site-suplementos",
+  "version": "1.0.0",
+  "description": "Site de venda de Suplementos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelGoulartB/Site-Suplementos.git"
+  },
+  "author": "Rafael Goulart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelGoulartB/Site-Suplementos/issues"
+  },
+  "homepage": "https://github.com/RafaelGoulartB/Site-Suplementos#readme"
+}
