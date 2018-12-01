@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/RafaelGoulartB/Site-Suplementos/issues"
   },
-  "homepage": "https://github.com/RafaelGoulartB/Site-Suplementos#readme"
+  "homepage": "https://github.com/RafaelGoulartB/Site-Suplementos#readme",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
 }
