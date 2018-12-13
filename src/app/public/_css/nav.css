@@ -95,11 +95,12 @@
     background-color: #000000;
     border: 1px solid #fff;
     margin-top: 1em;
-    transition: opacity .3s ease-out;
     opacity: 0;
+    transition: opacity .3s ease-out;
 }
 .dropdown-item {
     padding: 10px;   
+    display: none;
 }
 .dropdown-item a {
     font-size: 14pt;
@@ -108,6 +109,10 @@
 .dropdown-buttom:hover .dropdown-1 {
     opacity: 1;
 }
+
 .dropdown-buttom:hover .dropdown-2 {
     opacity: 1;
+}
+.dropdown-buttom:hover .dropdown-item {
+    display: block;
 }
