@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="/_css/reset.css">
     <link rel="stylesheet" href="/_css/global.css">
     <link rel="stylesheet" href="/_css/nav.css">
-    <link rel="stylesheet" href="/_css/produto.css">
+    <link rel="stylesheet" href="/_css/categorias.css">
+    <link rel="stylesheet" href="/_css/beneficios.css">
     <link rel="stylesheet" href="/_css/footer.css">
+    <link rel="stylesheet" href="/_css/produtos.css">
     <!-- endbuild -->
 </head>
 <body>
-    
+
     <header>
         <nav class="overnav">
             <ul>
@@ -54,49 +56,57 @@
                     </ul>
                 </li>
                 
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/">Sobre</a></li>
             </ul>
         </nav>
     </header>
-    
-    <div class="main">
-        <img src="/_img/produtos/<%= produto[0].img %>" alt="Foto de Produto">
-        
-        <div class="desc">
-            <h1 class="title"><%= produto[0].nome %></h1>
-            <p class="anuncio anuncio-1">R$ <span><%= produto[0].preco %></span> no pagamento via cartão em até 6x de R$ <span><%= Math.round(produto[0].preco/6) %></span> sem juros. </p>
-            <p class="anuncio anuncio-2">ou à vista com <span>10%</span> de desconto via boleto ou depósito por R$ <%= Math.round((produto[0].preco/100)*90) %></p>
-    
-            <button class="btn-comprar">Comprar</button>
-        </div>
+
+    <div id="main">
+
+        <!-- Produtos -->
+        <section class="produtos">
+            
+            <% produtos.forEach(produto => { %>
+            
+                <div class="produto">
+                    <a href="/produto/<%= produto.id %>">
+                        <img src="/_img/produtos/<%= produto.img %>" alt="">
+                        <p class="produto-title"> <%= produto.nome %> </p>
+                        <p class="produto-price"> R$<%= produto.preco %> </p>
+                    </a>
+                </div>
+            
+            <% }) %>
+
+        </section>
+
+        <!-- Rodapé -->
+        <footer>
+            <h1 class="logo">Growth.</h1>
+            
+            <div class="description">
+                <h2 class="title-description">Sobre nós</h2>
+                <p class="text-description">Est consectetur sapiente sed dignissimos. Repellat suscipit fugiat blanditiis quod iure culpa. Quos iste tenetur quis at officiis cum sunt maiores excepturi. Soluta autem sed molestiae voluptas quaerat non dolorum libero</p>
+            </div>
+            <div class="newsletter">
+                <h2>Newsletter</h2>
+                <div class="input-box">
+                    <input type="text" class="newsletter-box">
+                    <button class="send-email"><img src="/_img/arrow-rigth.svg"></button>
+                </div>
+                <p class="anuncio-newsletter">Inscreva-se em nossa newsletter</p>
+            </div>
+            <div class="redes">
+                <h2>Redes:</h2>
+                <a href="https://www.facebook.com" target="_blank"><img src="/_img/redes/facebook.svg" alt="Icone facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="/_img/redes/instagram.svg" alt="Icone instagram"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="/_img/redes/twitter.svg" alt="Icone twitter"></a>
+
+            </div>
+        </footer>
 
     </div>
-
-
-    <footer>
-        <h1 class="logo">Growth.</h1>
-        
-        <div class="description">
-            <h2 class="title-description">Sobre nós</h2>
-            <p class="text-description">Est consectetur sapiente sed dignissimos. Repellat suscipit fugiat blanditiis quod iure culpa. Quos iste tenetur quis at officiis cum sunt maiores excepturi. Soluta autem sed molestiae voluptas quaerat non dolorum libero</p>
-        </div>
-        <div class="newsletter">
-            <h2>Newsletter</h2>
-            <div class="input-box">
-                <input type="text" class="newsletter-box">
-                <button class="send-email"><img src="/_img/arrow-rigth.svg"></button>
-            </div>
-            <p class="anuncio-newsletter">Inscreva-se em nossa newsletter</p>
-        </div>
-        <div class="redes">
-            <h2>Redes:</h2>
-            <a href="https://www.facebook.com" target="_blank"><img src="/_img/redes/facebook.svg" alt="Icone facebook"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="/_img/redes/instagram.svg" alt="Icone instagram"></a>
-            <a href="https://www.twitter.com" target="_blank"><img src="/_img/redes/twitter.svg" alt="Icone twitter"></a>
-            
-        </div>
-    </footer>
     
 </body>
 </html>

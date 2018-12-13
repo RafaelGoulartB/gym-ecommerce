@@ -8,8 +8,7 @@ module.exports = function(app) {
         produtosDAO.lista().then(result =>
             res.render("index", {produtos : result})
         )
-        .catch(err => console.log("Erro ao carregar os produtos", err))
-
+        .catch(err => console.log("Erro ao carregar os produtos ", err))
 
     });
 }

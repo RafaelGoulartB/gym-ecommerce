@@ -26,6 +26,20 @@ class ProdutosDAO {
         });
     }
 
+    filtrar(categoria) {
+        return new Promise( (resolve, reject ) => {
+            this._connection.query("select * from produtos where categoria=?", categoria, (err, result) => {
+                err => {
+                    if(err) return reject("Falha ao carregar produtos da categoria");
+                }
+                return resolve(result)
+            });
+        });
+    }
+
+    pesquisa(query) {
+
+    }
     
 }
 
