@@ -15,7 +15,7 @@ class ProdutosDAO {
         });
     }
 
-    buscaID(id) {
+    buscaId(id) {
         return new Promise( (resolve, reject) => {
             this._connection.query('select * from produtos where id=?',id , (err, result) => {
                 err => {
@@ -26,7 +26,7 @@ class ProdutosDAO {
         });
     }
 
-
+    
 }
 
 

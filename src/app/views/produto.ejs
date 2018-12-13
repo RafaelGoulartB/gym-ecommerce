@@ -63,12 +63,12 @@
     </header>
     
     <div class="main">
-        <img src="/_img/produtos/whey-gold-standard.jpg" alt="Foto de Produto">
+        <img src="/_img/produtos/<%= produto[0].img %>" alt="Foto de Produto">
         
         <div class="desc">
-            <h1 class="title">Whey Protein</h1>
-            <p class="anuncio anuncio-1">R$ <span>85,00</span> no pagamento via cartão em até 6x de R$ <span>14,17</span> sem juros. </p>
-            <p class="anuncio anuncio-2">ou à vista com <span>10%</span> de desconto via boleto ou depósito por R$ 80,00</p>
+            <h1 class="title"><%= produto[0].nome %></h1>
+            <p class="anuncio anuncio-1">R$ <span><%= produto[0].preco %></span> no pagamento via cartão em até 6x de R$ <span><%= Math.round(produto[0].preco/6) %></span> sem juros. </p>
+            <p class="anuncio anuncio-2">ou à vista com <span>10%</span> de desconto via boleto ou depósito por R$ <%= Math.round((produto[0].preco/100)*90) %></p>
     
             <button class="btn-comprar">Comprar</button>
         </div>
