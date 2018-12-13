@@ -9,8 +9,8 @@ function createDBConnection(){
     });
 }
 
-module.exports = () => {
-    return createDBConnection
+module.exports = function() {
+    return createDBConnection;
 };
 
 

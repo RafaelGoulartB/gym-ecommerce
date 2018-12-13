@@ -21,4 +21,6 @@ class ProdutosDAO {
 }
 
 
-module.exports = ProdutosDAO;
+module.exports = function() {
+    return ProdutosDAO;
+}

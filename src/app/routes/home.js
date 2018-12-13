@@ -1,16 +1,15 @@
 module.exports = function(app) {
     
     app.get('/', (req, res) => {
-        var connection = src.app.infra.connectionFactory();;
-        // var dao = require("./../infra/produtosDAO");
-        
-        // var produtosDao = new dao(connection);
-        // produtosDAO.lista()
-        //             .then(produtos => {
-        //                 console.log(produtos)
-        //             })
-        //             .catch(erro => console.log(erro));
 
-        res.render("index");
+        let conn = app.src.app.infra.connectionFactory();
+        let produtosDAO = new app.src.app.infra.produtosDAO(conn);
+
+        produtosDAO.lista().then(result => {
+            res.render("index", {produto : result})
+        })
+        .catch(err => console.log("Erro ao carregar os produtos"))
+
+
     });
 }
