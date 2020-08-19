@@ -65,7 +65,6 @@ This project was made using the follow technologies:
 ```bash
 npm install
 ```
-```
 ### Run Aplication
 ```bash 
 npm start 
